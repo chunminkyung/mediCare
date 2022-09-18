@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/medicare/app/src/main/res/layout/activity_main.xml" value="0.16197916666666667" />
+        <entry key="..\:/Android/medicare/app/src/main/res/layout/activity_medi_calendar.xml" value="0.18385416666666668" />
+        <entry key="..\:/Android/medicare/app/src/main/res/layout/join.xml" value="0.16197916666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.40851449275362317" />
         <entry key="app/src/main/res/layout/join.xml" value="0.1" />
       </map>
