@@ -2,8 +2,10 @@
     <!-- Base application theme. -->
     <style name="Theme.MediCare" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <!--액션바 색상-->
+        <item name="colorPrimary">#f1f3f5</item>
+        <!--상태바 색상-->
+        <item name="colorPrimaryVariant">#000000</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

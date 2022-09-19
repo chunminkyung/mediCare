@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/bg_main"
+    android:background="@color/white"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="10dp" >
@@ -30,44 +30,36 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@color/input_register_bg"
-            android:hint="@string/name"
+            android:background="@color/purple_200"
             android:inputType="textCapWords"
             android:padding="10dp"
-            android:textColor="@color/input_register"
-            android:textColorHint="@color/input_register_hint" />
+            android:textColor="@color/purple_200"/>
 
         <EditText
             android:id="@+id/et_id"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@color/input_register_bg"
-            android:hint="@string/join_id"
+            android:background="@color/purple_200"
             android:inputType="textCapWords"
             android:padding="10dp"
-            android:textColor="@color/input_register"
-            android:textColorHint="@color/input_register_hint" />
+            android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/et_pass"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@color/input_register_bg"
-            android:hint="@string/join_password"
+            android:background="@color/purple_200"
             android:inputType="textEmailAddress"
-            android:padding="10dp"
-            android:textColor="@color/input_register"
-            android:textColorHint="@color/input_register_hint" />
+            android:padding="10dp" />
 
         <Button
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@color/point"
-            android:text="@string/btn_regi"
+            android:background="@color/purple_200"
             android:textColor="#ffffff" />
 
     </LinearLayout>
