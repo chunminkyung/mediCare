@@ -1,10 +1,10 @@
-package com.example.medicare
+package com.example.ktmedicare
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
-import android.widget.ImageView
+import com.example.medicare.R
 
 class IntroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

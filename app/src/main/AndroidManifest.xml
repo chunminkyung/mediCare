@@ -13,9 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediCare"
         tools:targetApi="31">
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.example.ktmedicare.MainActivity" />
         <activity
-            android:name=".IntroActivity"
+            android:name="com.example.ktmedicare.IntroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MediCalendar"
+            android:name="com.example.ktmedicare.MediCalendar"
             android:exported="false" />
     </application>
 

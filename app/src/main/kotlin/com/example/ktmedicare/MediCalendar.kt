@@ -1,7 +1,8 @@
-package com.example.medicare
+package com.example.ktmedicare
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.medicare.R
 
 class MediCalendar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
