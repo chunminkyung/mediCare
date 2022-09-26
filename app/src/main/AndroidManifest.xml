@@ -27,7 +27,7 @@
             tools:ignore="MissingClass" />
         <activity android:name="com.example.ktmedicare.MainActivity" />
         <activity
-            android:name="com.example.ktmedicare.MediCalendar"
+            android:name=".MediCalendar"
             android:exported="false" />
     </application>
 

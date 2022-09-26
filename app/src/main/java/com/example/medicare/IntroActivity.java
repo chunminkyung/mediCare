@@ -6,9 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.ktmedicare.MainActivity;
-import com.example.ktmedicare.MediCalendar;
-
 public class IntroActivity extends AppCompatActivity {
 
     @Override
