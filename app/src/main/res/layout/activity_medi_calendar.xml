@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="120px"
                 android:fontFamily="sans-serif"
-                android:text="저번/이번/다음달"
+                android:text="저번 /이번 /다음달"
                 android:textSize="20dp"
                 android:letterSpacing="0.3"
                 android:layout_marginTop="30px" />
