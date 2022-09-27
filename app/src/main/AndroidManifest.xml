@@ -13,12 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediCare"
         tools:targetApi="31">
-        <activity android:name=".IntroActivity"
+        <activity
+            android:name=".MediAdd"
+            android:exported="true" />
+        <activity
+            android:name=".IntroActivity"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
@@ -26,7 +31,7 @@
             tools:ignore="MissingClass" />
         <activity android:name="com.example.ktmedicare.MainActivity" />
         <activity
-            android:name="MediCalendar"
+            android:name=".MediCalendar"
             android:exported="false" />
     </application>
 
