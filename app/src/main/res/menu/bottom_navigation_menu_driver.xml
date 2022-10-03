@@ -17,6 +17,12 @@
         android:id="@+id/page_medilist"
         android:enabled="true"
         android:icon="@drawable/icon_list"
+        android:title="리스트"/>
+
+    <item
+        android:id="@+id/page_chart"
+        android:enabled="true"
+        android:icon="@drawable/icon_chart"
         android:title="그래프"/>
 
     <item
