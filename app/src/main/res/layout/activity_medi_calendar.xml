@@ -40,11 +40,17 @@
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
+        android:id="@+id/linearlayout_overall"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_Menu">
-<!--Material Calendar 사용 -->
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView_userMenu"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_Menu"
+        tools:ignore="NotSibling"
+        >
+        <!-- tools:ignore="NotSibling"-->
+
+ <!--Material Calendar 사용 -->
     <com.prolificinteractive.materialcalendarview.MaterialCalendarView
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/calendarView"
@@ -52,7 +58,21 @@
     android:layout_height="wrap_content"
     app:mcv_selectionColor="#a9dbf0cb"
     app:mcv_showOtherDates="defaults"
-    tools:ignore="MissingConstraints,UnknownId"
-    />
+    tools:ignore="MissingConstraints,UnknownId" />
+
     </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView_userMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_radius_bottomnav"
+        app:itemIconTint="@drawable/menu_click_color"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        layout_constraintHorizontal_bias="0.0"
+        layout_constraiontStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu_driver" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
