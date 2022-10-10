@@ -61,24 +61,24 @@
     tools:ignore="MissingConstraints,UnknownId" />
 
     </LinearLayout>
+    <!--
+        <FrameLayout
+            android:id="@+id/menu_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?attr/actionBarSize"/>
 
-    <FrameLayout
-        android:id="@+id/menu_frame_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="?attr/actionBarSize"/>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView_userMenu"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/bg_radius_bottomnav"
-        app:itemIconTint="@drawable/menu_click_color"
-        app:labelVisibilityMode="unlabeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        layout_constraintHorizontal_bias="0.0"
-        layout_constraiontStart_toStartOf="parent"
-        app:menu="@menu/bottom_navigation_menu_driver" />
-
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView_userMenu"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_radius_bottomnav"
+            app:itemIconTint="@drawable/menu_click_color"
+            app:labelVisibilityMode="unlabeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            layout_constraintHorizontal_bias="0.0"
+            layout_constraiontStart_toStartOf="parent"
+            app:menu="@menu/bottom_navigation_menu_driver" />
+    -->
 </androidx.constraintlayout.widget.ConstraintLayout>
