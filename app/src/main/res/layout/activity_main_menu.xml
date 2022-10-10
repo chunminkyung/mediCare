@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainMenuActivity">
-
+<!--
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_Menu"
         android:layout_width="match_parent"
@@ -38,7 +38,7 @@
             tools:layout_editor_absoluteY="8dp"/>
 
     </androidx.appcompat.widget.Toolbar>
-
+-->
     <FrameLayout
         android:id="@+id/menu_frame_layout"
         android:layout_width="match_parent"
