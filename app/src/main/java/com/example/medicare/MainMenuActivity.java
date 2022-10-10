@@ -44,7 +44,7 @@ public class MainMenuActivity extends AppCompatActivity {
                 case R.id.page_bookmark:
                     transaction.replace(R.id.menu_frame_layout,fragmentBookmark).commitNowAllowingStateLoss();
                     break;
-                case R.id.page_medilist:
+                case R.id.page_add:
                     transaction.replace(R.id.menu_frame_layout,fragmentAdd).commitNowAllowingStateLoss();
                     break;
                 case R.id.page_chart:

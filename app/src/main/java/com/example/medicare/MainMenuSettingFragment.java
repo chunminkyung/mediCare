@@ -63,7 +63,7 @@ public class MainMenuSettingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_main_menu_medi_chart,container,false);
+        view = inflater.inflate(R.layout.fragment_main_menu_setting,container,false);
 
         toolbar_logo = (ImageView) view.findViewById(R.id.toolbar_logo);
 
