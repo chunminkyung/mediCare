@@ -25,14 +25,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"
-            tools:ignore="MissingClass" />
         <activity android:name="com.example.ktmedicare.MainActivity" />
         <activity
             android:name=".MediCalendar"
             android:exported="false" />
+        <activity android:name=".MainMenuActivity"/>
     </application>
 
 </manifest>

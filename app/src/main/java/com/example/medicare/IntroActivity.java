@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.ktmedicare.MainActivity;
-
 public class IntroActivity extends AppCompatActivity {
 
     @Override
@@ -19,8 +17,8 @@ public class IntroActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable(){
             @Override
             public void run() {
-                Intent intent = new Intent (getApplicationContext(), MediCalendar.class);
-                startActivity(intent); //인트로 실행 후 바로 MainActivity로 넘어감.
+                Intent intent = new Intent (getApplicationContext(), MainMenuActivity.class);
+                startActivity(intent); //인트로 실행 후 바로 설정해놓은 화면으로 넘어감.
                 finish();
             }
         },3000);
