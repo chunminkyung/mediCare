@@ -25,7 +25,10 @@ import java.util.Calendar;
  * create an instance of this fragment.
  */
 public class MainMenuMediCalendarFragment extends Fragment {
+
     private View view;
+
+    //View view;
     //MaterialCalendarView calendarView;
 
     private FragmentMainMenuMediCalendarBinding binding;
@@ -98,6 +101,7 @@ public class MainMenuMediCalendarFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         /*
         if (calendarView==null){
             container.removeView(calendarView);

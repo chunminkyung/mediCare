@@ -51,9 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="20dp">
-
+            android:layout_marginHorizontal="20dp">
             <TextView
                 android:id="@+id/search_text"
                 android:layout_width="wrap_content"
@@ -110,6 +108,7 @@
         android:orientation="horizontal"
         android:layout_marginHorizontal="16dp"
         android:padding="5dp">
+
         <!--android:background="@drawable/edittext_box"-->
 
         <EditText
@@ -121,12 +120,14 @@
             android:fontFamily="sans-serif"
             android:textSize="20dp"
             android:background="@null"/>
+            android:background="@drawable/edittext_box"
+            />
 
         <Button
             android:id="@+id/search_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="6"
+            android:layout_weight="5"
             android:background="@drawable/icon_search" />
 
     </LinearLayout>
@@ -140,6 +141,7 @@
             android:textSize="20dp"
             android:gravity="center"
             android:text="서울케ㅔ이내과의원"/>
+            android:text="의료기관 목록1"/>
 
         <TextView
             android:layout_marginTop="30dp"
