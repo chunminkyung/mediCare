@@ -34,7 +34,7 @@ public class MediCalendar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMediCalendarBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+/*
         MaterialCalendarView materialCalendarView=binding.calendarView;
 
         materialCalendarView.state().edit()
@@ -56,7 +56,7 @@ public class MediCalendar extends AppCompatActivity {
 
             }
         });
-
+*/
     }
 
 }
