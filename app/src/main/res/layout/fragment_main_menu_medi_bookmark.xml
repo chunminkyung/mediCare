@@ -139,7 +139,7 @@
             android:fontFamily="sans-serif"
             android:textSize="20dp"
             android:gravity="center"
-            android:text="의료기관 목록1"/>
+            android:text="서울케ㅔ이내과의원"/>
 
         <TextView
             android:layout_marginTop="30dp"
@@ -149,7 +149,7 @@
             android:fontFamily="sans-serif"
             android:textSize="20dp"
             android:gravity="center"
-            android:text="의료기관 목록2"/>
+            android:text="백내과의원"/>
 
         <TextView
             android:layout_marginTop="30dp"
@@ -159,7 +159,7 @@
             android:fontFamily="sans-serif"
             android:textSize="20dp"
             android:gravity="center"
-            android:text="의료기관 목록3"/>
+            android:text="라미에르의원"/>
 
     </LinearLayout>
 

@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ktmedicare.MainActivity;
@@ -23,6 +24,7 @@ import com.example.ktmedicare.MainActivity;
 public class MainMenuMediBookmark extends Fragment {
     private View view;
     private TextView page_bookmark;
+    private ImageView toolbar_logo;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -82,6 +84,18 @@ public class MainMenuMediBookmark extends Fragment {
                 startActivity(intent);
             }
         });
+
+        toolbar_logo = (ImageView) view.findViewById(R.id.toolbar_logo);
+
+        toolbar_logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),MainMenuActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+            }
+        });
+
 
         return view;
         //return inflater.inflate(R.layout.fragment_main_menu_medi_bookmark, container, false);
