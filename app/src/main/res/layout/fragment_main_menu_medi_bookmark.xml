@@ -44,13 +44,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
-        android:layout_marginHorizontal="20dp"
         android:orientation="vertical">
+        <!--android:layout_marginHorizontal="20dp"-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp">
 
             <TextView
@@ -66,6 +67,7 @@
                 android:textSize="20dp"/>
 
             <TextView
+                android:id="@+id/page_bookmark"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
@@ -81,7 +83,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp">
 
         <View
             android:layout_width="match_parent"
@@ -103,7 +106,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:background="@drawable/edittext_box"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="16dp"
+        android:padding="5dp">
         <!--android:background="@drawable/edittext_box"-->
 
         <EditText
@@ -114,14 +120,13 @@
             android:letterSpacing="0.02"
             android:fontFamily="sans-serif"
             android:textSize="20dp"
-            android:background="@drawable/edittext_box"
-            />
+            android:background="@null"/>
 
         <Button
             android:id="@+id/search_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="5"
+            android:layout_weight="6"
             android:background="@drawable/icon_search" />
 
     </LinearLayout>

@@ -14,6 +14,9 @@
         android:theme="@style/Theme.MediCare"
         tools:targetApi="31">
         <activity
+            android:name=".MediSubBookmark"
+            android:exported="false" />
+        <activity
             android:name=".MediAdd"
             android:exported="true" />
         <activity
@@ -29,7 +32,7 @@
         <activity
             android:name=".MediCalendar"
             android:exported="false" />
-        <activity android:name=".MainMenuActivity"/>
+        <activity android:name=".MainMenuActivity" />
     </application>
 
 </manifest>

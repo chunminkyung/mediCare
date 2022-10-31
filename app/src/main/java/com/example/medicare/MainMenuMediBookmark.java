@@ -1,5 +1,6 @@
 package com.example.medicare;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,6 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.example.ktmedicare.MainActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +21,8 @@ import android.widget.Button;
  * create an instance of this fragment.
  */
 public class MainMenuMediBookmark extends Fragment {
+    private View view;
+    private TextView page_bookmark;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,6 +68,23 @@ public class MainMenuMediBookmark extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_menu_medi_bookmark, container, false);
+
+        view = inflater.inflate(R.layout.fragment_main_menu_medi_bookmark,container,false);
+
+        page_bookmark = (TextView) view.findViewById(R.id.page_bookmark);
+        //fragment에서 findViewById는 view.을 이용해서 사용
+
+        page_bookmark.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),MediSubBookmark.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+            }
+        });
+
+        return view;
+        //return inflater.inflate(R.layout.fragment_main_menu_medi_bookmark, container, false);
     }
+
 }
