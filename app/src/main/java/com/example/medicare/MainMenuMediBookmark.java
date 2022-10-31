@@ -96,7 +96,6 @@ public class MainMenuMediBookmark extends Fragment {
             }
         });
 
-
         return view;
         //return inflater.inflate(R.layout.fragment_main_menu_medi_bookmark, container, false);
     }
