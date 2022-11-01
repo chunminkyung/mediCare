@@ -25,9 +25,6 @@ import java.util.Calendar;
  * create an instance of this fragment.
  */
 public class MainMenuMediCalendarFragment extends Fragment {
-
-    private View view;
-
     //View view;
     //MaterialCalendarView calendarView;
 

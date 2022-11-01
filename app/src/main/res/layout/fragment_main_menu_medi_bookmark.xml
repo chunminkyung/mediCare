@@ -44,14 +44,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
+        android:layout_marginHorizontal="20dp"
         android:orientation="vertical">
-        <!--android:layout_marginHorizontal="20dp"-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginHorizontal="20dp">
+            android:layout_marginTop="20dp">
+
             <TextView
                 android:id="@+id/search_text"
                 android:layout_width="wrap_content"
@@ -65,7 +66,6 @@
                 android:textSize="20dp"/>
 
             <TextView
-                android:id="@+id/page_bookmark"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
@@ -81,8 +81,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginHorizontal="20dp">
+        android:orientation="horizontal">
 
         <View
             android:layout_width="match_parent"
@@ -104,11 +103,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/edittext_box"
-        android:orientation="horizontal"
-        android:layout_marginHorizontal="16dp"
-        android:padding="5dp">
-
+        android:orientation="horizontal">
         <!--android:background="@drawable/edittext_box"-->
 
         <EditText
@@ -119,7 +114,6 @@
             android:letterSpacing="0.02"
             android:fontFamily="sans-serif"
             android:textSize="20dp"
-            android:background="@null"/>
             android:background="@drawable/edittext_box"
             />
 
@@ -140,7 +134,6 @@
             android:fontFamily="sans-serif"
             android:textSize="20dp"
             android:gravity="center"
-            android:text="서울케ㅔ이내과의원"/>
             android:text="의료기관 목록1"/>
 
         <TextView
@@ -151,7 +144,7 @@
             android:fontFamily="sans-serif"
             android:textSize="20dp"
             android:gravity="center"
-            android:text="백내과의원"/>
+            android:text="의료기관 목록2"/>
 
         <TextView
             android:layout_marginTop="30dp"
@@ -161,7 +154,7 @@
             android:fontFamily="sans-serif"
             android:textSize="20dp"
             android:gravity="center"
-            android:text="라미에르의원"/>
+            android:text="의료기관 목록3"/>
 
     </LinearLayout>
 
