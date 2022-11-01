@@ -2,12 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@color/white"
-    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp" >
+    android:layout_marginTop="80dp"
+    tools:context=".MediRegister">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -24,43 +23,52 @@
             android:padding="10dp"
             android:layout_marginBottom="20dp"
             tools:srcCompat="@tools:sample/avatars" />
-
+        <!--샘플 아바타는 실제로 드로어블 이미지 자산이 아니기 때문에 실행시 보이지 않믕
+        따라서 도구 설정에서만 렌더링할 수 있습니다(빌드된 apk가 아님).-->
         <EditText
             android:id="@+id/et_name"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@color/purple_200"
+            android:background="@color/white"
+            android:hint="이름을 입력해주세요."
             android:inputType="textCapWords"
             android:padding="10dp"
-            android:textColor="@color/purple_200"/>
+            android:textColor="#000000"
+            />
 
         <EditText
             android:id="@+id/et_id"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@color/purple_200"
-            android:inputType="textCapWords"
+            android:background="@color/white"
+            android:hint="아이디를 입력해주세요."
+            android:inputType="textEmailAddress"
             android:padding="10dp"
-            android:textColor="@color/black" />
+            android:textColor="#000000" />
 
         <EditText
             android:id="@+id/et_pass"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@color/purple_200"
-            android:inputType="textEmailAddress"
-            android:padding="10dp" />
+            android:background="@color/white"
+            android:hint="비밀번호를 입력해주세요."
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#000000"
+            />
 
         <Button
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@color/purple_200"
-            android:textColor="#ffffff" />
+            android:background="@color/main_color"
+            android:text="회원가입"
+            android:textStyle="bold"
+            android:textColor="#000000" />
 
     </LinearLayout>
 
