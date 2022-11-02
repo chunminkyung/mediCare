@@ -40,12 +40,80 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="설정"
-        android:textColor="@color/black"
-        android:textSize="30dp" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:padding="10dp"
+            android:layout_margin="24dp"
+            android:src="@drawable/icon_person"/>
+
+        <TextView
+            android:id="@+id/login_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.02"
+            android:fontFamily="sans-serif"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="김배화"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="5"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_color"/>
+
+        <TextView
+            android:id="@+id/account_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.02"
+            android:fontFamily="sans-serif"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="left"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="계정설정"/>
+
+        <TextView
+            android:id="@+id/help_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.02"
+            android:fontFamily="sans-serif"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="left"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:text="도움말"/>
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.02"
+            android:fontFamily="sans-serif"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="left"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:text="로그아웃"/>
+
+
+    </LinearLayout>
 
 </FrameLayout>

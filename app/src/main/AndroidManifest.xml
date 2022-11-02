@@ -14,6 +14,9 @@
         android:theme="@style/Theme.MediCare"
         tools:targetApi="31">
         <activity
+            android:name=".MediAccount"
+            android:exported="false" />
+        <activity
             android:name=".MediRegister"
             android:exported="false" />
         <activity

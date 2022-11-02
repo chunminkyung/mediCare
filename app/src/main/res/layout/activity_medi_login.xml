@@ -10,21 +10,24 @@
     tools:context=".MediLogin">
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity=""
+        android:layout_gravity="center"
         android:orientation="vertical"
         android:paddingLeft="20dp"
         android:paddingRight="20dp">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="341dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:scaleX="4"
+            android:scaleY="4"
             android:padding="10dp"
+            android:scaleType="center"
             android:layout_marginBottom="20dp"
-            tools:srcCompat="@tools:sample/avatars" />
-
+            android:src="@drawable/icon_person" />
+            <!--            tools:srcCompat="@tools:sample/avatars"-->
 
         <EditText
             android:id="@+id/et_id"
