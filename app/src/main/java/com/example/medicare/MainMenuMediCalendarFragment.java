@@ -2,14 +2,22 @@ package com.example.medicare;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CalendarView;
 
 import com.example.medicare.databinding.ActivityMediCalendarBinding;
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.CalendarMode;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
+
+import java.util.Calendar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,7 +25,8 @@ import com.example.medicare.databinding.ActivityMediCalendarBinding;
  * create an instance of this fragment.
  */
 public class MainMenuMediCalendarFragment extends Fragment {
-    private ActivityMediCalendarBinding binding;
+    private View view;
+    public MaterialCalendarView calendarView;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -64,7 +73,30 @@ public class MainMenuMediCalendarFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_menu_medi_calendar, container, false);
+        view = inflater.inflate(R.layout.fragment_main_menu_medi_calendar,container,false);
+
+        calendarView = (MaterialCalendarView) view.findViewById(R.id.calendarView);
+
+        calendarView.state().edit()
+                .setFirstDayOfWeek(Calendar.SUNDAY)
+                .setMinimumDate(CalendarDay.from(2017,0,1))
+                .setMaximumDate(CalendarDay.from(2030,11,31))
+                .setCalendarDisplayMode(CalendarMode.MONTHS)
+                .commit();
+
+        calendarView.addDecorators(
+                new SundayDecorator(),
+                new SaturdayDecorator(),
+                new onDateDecorator()
+        );
+
+        calendarView.setOnDateChangedListener(new OnDateSelectedListener() {
+            @Override
+            public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
+
+            }
+        });
+        return view;
+        //return inflater.inflate(R.layout.fragment_main_menu_medi_calendar, container, false);
     }
 }

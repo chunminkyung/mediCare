@@ -67,7 +67,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="어떤 점을 문희 하시겠습니까?"
+            android:text="어떤 점을 문의 하시겠습니까?"
             android:gravity="center"
             android:fontFamily="sans-serif"
             android:textSize="20dp"
