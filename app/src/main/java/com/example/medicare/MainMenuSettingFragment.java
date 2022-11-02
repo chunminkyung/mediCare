@@ -90,6 +90,16 @@ public class MainMenuSettingFragment extends Fragment {
             }
         });
 
+        help_setting=(TextView) view.findViewById(R.id.help_setting);
+        help_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),MediHelp.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+            }
+        });
+
         return view;
         //return inflater.inflate(R.layout.fragment_main_menu_setting, container, false);
     }
