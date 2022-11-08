@@ -5,6 +5,7 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,15 +15,25 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link MainMenuMediBookmark#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MainMenuMediBookmark extends Fragment {
+public class MainMenuMediBookmark extends Fragment
+        implements OnMapReadyCallback
+{
     private View view;
     private ImageView toolbar_logo;
     private TextView bookmark;
+    private MapView mapView = null;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -64,14 +75,16 @@ public class MainMenuMediBookmark extends Fragment {
         }
     }
 
+    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_main_menu_medi_bookmark,container,false);
 
-        bookmark = (TextView) view.findViewById(R.id.bookmark);
+        //bookmark = (TextView) view.findViewById(R.id.bookmark);
 
+        /*
         bookmark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,6 +93,8 @@ public class MainMenuMediBookmark extends Fragment {
                 startActivity(intent1);
             }
         });
+        */
+
 
         toolbar_logo = (ImageView) view.findViewById(R.id.toolbar_logo);
 
@@ -91,8 +106,76 @@ public class MainMenuMediBookmark extends Fragment {
                 startActivity(intent);
             }
         });
+
+        mapView = (MapView) view.findViewById(R.id.map);
+        mapView.getMapAsync(this);
+
         return view;
 
         //return inflater.inflate(R.layout.fragment_main_menu_medi_bookmark, container, false);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mapView.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        mapView.onStop();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        mapView.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        mapView.onResume();
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        mapView.onPause();
+    }
+
+    @Override
+    public void onLowMemory(){
+        super.onLowMemory();
+        mapView.onLowMemory();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        mapView.onLowMemory();
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        if (mapView != null) {
+            mapView.onCreate(savedInstanceState);
+        }
+    }
+
+
+    @Override
+    public void onMapReady(GoogleMap googleMap){
+        LatLng SEOUL = new LatLng(37.56,126.97);
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(SEOUL);
+        markerOptions.title("서울");
+        markerOptions.snippet("현재위치");
+        googleMap.addMarker(markerOptions);
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
+        googleMap.animateCamera(CameraUpdateFactory.zoomTo(13));
     }
 }

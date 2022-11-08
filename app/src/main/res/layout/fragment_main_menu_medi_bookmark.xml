@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainMenuMediBookmark">
+
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.appcompat.widget.Toolbar
@@ -40,123 +41,12 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
+    <com.google.android.gms.maps.MapView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:layout_marginHorizontal="20dp"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
-
-            <TextView
-                android:id="@+id/search_text"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:textAlignment="center"
-                android:text="의료기관 검색"
-                android:letterSpacing="0.02"
-                android:textColor="@color/main_color"
-                android:textStyle="bold"
-                android:textSize="20dp"/>
-
-            <TextView
-                android:id="@+id/bookmark"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:textAlignment="center"
-                android:text="즐겨찾기"
-                android:letterSpacing="0.02"
-                android:textColor="#bcbcbc"
-                android:textStyle="bold"
-                android:textSize="20dp"/>
-
-        </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_weight="5"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/border_color"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_weight="5"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/border_no_color"/>
-
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <!--android:background="@drawable/edittext_box"-->
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_weight="1"
-            android:hint="의료기관명/주소입력"
-            android:letterSpacing="0.02"
-            android:fontFamily="sans-serif"
-            android:textSize="20dp"
-            android:background="@drawable/edittext_box"
-            />
-
-        <Button
-            android:id="@+id/search_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="5"
-            android:background="@drawable/icon_search" />
-
-    </LinearLayout>
-
-        <TextView
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:letterSpacing="0.02"
-            android:fontFamily="sans-serif"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:text="의료기관 목록1"/>
-
-        <TextView
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:letterSpacing="0.02"
-            android:fontFamily="sans-serif"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:text="의료기관 목록2"/>
-
-        <TextView
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:letterSpacing="0.02"
-            android:fontFamily="sans-serif"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:text="의료기관 목록3"/>
-
-    </LinearLayout>
-
-</FrameLayout>
+</RelativeLayout>
