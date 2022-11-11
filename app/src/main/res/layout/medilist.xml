@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        tools:context="com.example.ktmedicare.MediList"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <androidx.appcompat.widget.Toolbar android:layout_height="45dp" android:layout_width="match_parent" app:layout_constraintTop_toTopOf="parent" android:elevation="15dp" android:background="@color/white" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="1.0" app:layout_constraintEnd_toEndOf="parent" android:id="@+id/toolbar_Menu">
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:textSize="17dp" android:textColor="@color/black" android:letterSpacing="0.02" android:text="약 리스트" android:textStyle="bold" android:fontFamily="sans-serif" android:layout_gravity="center_horizontal"/>
+
+            <ImageView android:layout_height="40dp" android:layout_width="55dp" android:id="@+id/toolbar_logo" tools:layout_editor_absoluteY="8dp" tools:layout_editor_absolutX="20dp" android:src="@drawable/logo_main" android:layout_marginLeft="20dp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.recyclerview.widget.RecyclerView android:layout_height="0dp" android:layout_width="match_parent" android:id="@+id/rvPost" tools:layout_editor_absoluteX="62dp" app:layout_constraintVertical_bias="1.0" app:layout_constraintTop_toBottomOf="@id/toolbar_Menu" app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="20dp" android:layout_marginTop="40dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
