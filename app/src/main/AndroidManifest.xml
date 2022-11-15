@@ -88,6 +88,7 @@
             android:name=".MediCalendar"
             android:exported="false" />
         <activity android:name=".MainMenuActivity" />
+        <activity android:name="com.example.ktmedicare.MediAdd"/>
     </application>
 
 </manifest>

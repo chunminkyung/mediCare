@@ -1,5 +1,6 @@
 package com.example.ktmedicare
 
+import android.content.Intent
 import android.os.Bundle
 import com.example.ktmedicare.MainMenuMediAddFragment
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil.setContentView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.medicare.MainMenuMediCalendarFragment
 import com.example.medicare.R
 import com.example.medicare.databinding.FragmentMainMenuMediAddBinding
 
@@ -106,6 +108,11 @@ class MainMenuMediAddFragment : Fragment() {
             adapter = postAdapter
             // LinearLayoutManager - default vertical 방향 옵션 설정
             layoutManager = LinearLayoutManager(context)//this@MainMenuMediAddFragment)
+        }
+
+        binding.addMedicine.setOnClickListener(){
+            val intent = Intent(context,MediAdd::class.java)
+            startActivity(intent)
         }
     }
 
