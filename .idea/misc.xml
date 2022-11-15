@@ -18,6 +18,7 @@
         <entry key="..\:/Android/medicare/app/src/main/res/drawable-xxhdpi/edittext_box.xml" value="0.1" />
         <entry key="..\:/Android/medicare/app/src/main/res/drawable-xxhdpi/edittext_color_box.xml" value="0.1" />
         <entry key="..\:/Android/medicare/app/src/main/res/drawable-xxhdpi/menu_click_color.xml" value="0.1195" />
+        <entry key="..\:/Android/medicare/app/src/main/res/drawable/alart_layout.xml" value="0.1" />
         <entry key="..\:/Android/medicare/app/src/main/res/drawable/edittext_color_box.xml" value="0.1" />
         <entry key="..\:/Android/medicare/app/src/main/res/drawable/ic_launcher_background.xml" value="0.135" />
         <entry key="..\:/Android/medicare/app/src/main/res/layout/activity_hcpassword.xml" value="0.19444444444444445" />
@@ -37,6 +38,7 @@
         <entry key="..\:/Android/medicare/app/src/main/res/layout/activity_modify_login_id.xml" value="0.20462962962962963" />
         <entry key="..\:/Android/medicare/app/src/main/res/layout/activity_modify_login_id_check.xml" value="0.20462962962962963" />
         <entry key="..\:/Android/medicare/app/src/main/res/layout/activity_modify_login_password.xml" value="0.20462962962962963" />
+        <entry key="..\:/Android/medicare/app/src/main/res/layout/alart_layout.xml" value="0.184375" />
         <entry key="..\:/Android/medicare/app/src/main/res/layout/alert_layout.xml" value="0.16" />
         <entry key="..\:/Android/medicare/app/src/main/res/layout/fragment_main_menu_medi_add.xml" value="0.176" />
         <entry key="..\:/Android/medicare/app/src/main/res/layout/fragment_main_menu_medi_bookmark.xml" value="0.176" />
