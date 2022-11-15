@@ -6,6 +6,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.setContentView
 import com.example.medicare.MainMenuMediCalendarFragment
+import com.example.medicare.MediAlarm
 import com.example.medicare.R
 import com.example.medicare.R.layout.*
 
@@ -123,11 +124,11 @@ class MediAdd : AppCompatActivity() {
             }
         }
  */
-       // val secondIntent = Intent(this, MediList::class.java)
+        val secondIntent = Intent(this, MediAlarm::class.java)
 
-        //medi_regi.setOnClickListener{
-        //    startActivity(secondIntent)
-       // }
+        medi_regi.setOnClickListener{
+           startActivity(secondIntent)
+        }
 /*
         toolbar_back.setOnClickListener{
         val intent = Intent(this,MainMenuMediCalendarFragment::class.java)
