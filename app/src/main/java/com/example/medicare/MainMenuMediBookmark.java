@@ -5,6 +5,7 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -19,6 +20,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -34,6 +37,8 @@ public class MainMenuMediBookmark extends Fragment
     private ImageView toolbar_logo;
     private TextView bookmark;
     private MapView mapView = null;
+    private GoogleMap mMap;
+    private GroundOverlayOptions videoMark;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -169,13 +174,23 @@ public class MainMenuMediBookmark extends Fragment
 
     @Override
     public void onMapReady(GoogleMap googleMap){
-        LatLng SEOUL = new LatLng(37.56,126.97);
+        mMap = googleMap;
+        LatLng BAEWHA = new LatLng(37.577888533547,126.96763564696);
         MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(SEOUL);
-        markerOptions.title("서울");
+        markerOptions.position(BAEWHA);
+        markerOptions.title("배화여대");
         markerOptions.snippet("현재위치");
-        googleMap.addMarker(markerOptions);
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
-        googleMap.animateCamera(CameraUpdateFactory.zoomTo(13));
+        mMap.addMarker(markerOptions);
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(BAEWHA));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(16));
+
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(@NonNull LatLng latLng) {
+                videoMark = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.icon_location)).position(latLng,50f,50f);
+                mMap.addGroundOverlay(videoMark);
+            }
+        });
     }
 }
