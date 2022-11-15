@@ -89,7 +89,6 @@
             android:exported="false" />
         <activity android:name=".MainMenuActivity" />
         <activity android:name="com.example.ktmedicare.MediAdd"/>
-        <activity android:name=".MediAlarm"/>
     </application>
 
 </manifest>
