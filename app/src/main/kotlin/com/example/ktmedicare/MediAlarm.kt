@@ -7,11 +7,16 @@ import android.app.PendingIntent
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.medicare.databinding.AlertLayoutBinding
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 class MediAlarm:AppCompatActivity() {
@@ -41,6 +46,12 @@ class MediAlarm:AppCompatActivity() {
             cancelAlarm()
         }
 
+        //현재 시간불러오기
+        val now : Long = System.currentTimeMillis()
+        val date = Date(now)
+        val dateFormat = SimpleDateFormat("h:mm a", Locale("ko","KR"))
+        val time = dateFormat.format(date)
+        binding.selectedTime.setText(time)
 
     }
 
@@ -66,7 +77,6 @@ class MediAlarm:AppCompatActivity() {
         )
         Toast.makeText(this, "알람이 성공적으로 설정되었습니다.", Toast.LENGTH_SHORT).show()
 
-
     }
 
     private fun showTimePicker() {
@@ -78,6 +88,8 @@ class MediAlarm:AppCompatActivity() {
             .build()
 
         picker.show(supportFragmentManager, "medicare")
+
+        //binding.selectedTime.text=
 
         picker.addOnPositiveButtonClickListener {
             if (picker.hour > 12) {

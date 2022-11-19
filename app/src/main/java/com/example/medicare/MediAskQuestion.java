@@ -37,5 +37,15 @@ public class MediAskQuestion extends AppCompatActivity {
                 finish();
             }
         });
+
+        //알람 설정 방법 페이지로 이동
+        binding.layoutSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),HSAlarm.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }

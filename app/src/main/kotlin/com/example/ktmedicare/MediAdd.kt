@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.medicare.MainMenuMediCalendarFragment
 import com.example.medicare.MediAlarm
 import com.example.medicare.R
 
@@ -16,6 +17,7 @@ class MediAdd : AppCompatActivity() {
         val medi_name : EditText = findViewById(R.id.medi_name)
         val medi_regi : Button = findViewById(R.id.btn_regi)
         val toolbar_back : ImageView = findViewById(R.id.toolbar_back)
+        val btn_add : Button = findViewById(R.id.btn_add)
 
         //checkBox -> 요일
         val checkMonday = findViewById<CheckBox>(R.id.checkMon)
@@ -129,7 +131,12 @@ class MediAdd : AppCompatActivity() {
            startActivity(secondIntent)
         }
 
+        val intent = Intent(this,MediList::class.java)
 
+        btn_add.setOnClickListener{
+            startActivity(intent)
+            Toast.makeText(applicationContext,"약 등록이 완료되었습니다.",Toast.LENGTH_SHORT).show();
+        }
 /*
         toolbar_back.setOnClickListener{
         val intent = Intent(this,MainMenuMediCalendarFragment::class.java)

@@ -21,6 +21,9 @@
         android:theme="@style/Theme.MediCare"
         tools:targetApi="31">
         <activity
+            android:name=".HSAlarm"
+            android:exported="false" />
+        <activity
             android:name="com.example.ktmedicare.MediList"
             android:exported="false" />
         <!--
@@ -88,8 +91,8 @@
             android:name=".MediCalendar"
             android:exported="false" />
         <activity android:name=".MainMenuActivity" />
-        <activity android:name="com.example.ktmedicare.MediAdd"/>
-        <activity android:name=".MediAlarm"/>
+        <activity android:name="com.example.ktmedicare.MediAdd" />
+        <activity android:name=".MediAlarm" />
     </application>
 
 </manifest>

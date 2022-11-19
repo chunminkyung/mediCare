@@ -23,7 +23,7 @@
             android:layout_gravity="center_horizontal"
             android:fontFamily="sans-serif"
             android:textStyle="bold"
-            android:text="약 알림 설정"
+            android:text="약 알람 설정"
             android:letterSpacing="0.02"
             android:textColor="@color/black"
             android:textSize="17dp"/>
